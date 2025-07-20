@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\deputadoController;
 
-Route::get('/', function () {
-    return view('welcome');
+
+//Routes Deputies
+Route::controller(deputadoController::class)->group(function(){
+    Route::get('/', 'index')->name('deputados.index');
 });
