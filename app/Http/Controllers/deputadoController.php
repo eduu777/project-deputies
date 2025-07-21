@@ -20,4 +20,10 @@ class deputadoController extends Controller
 
         return view('welcome', ['deputados' => $deputados]);
     }
+
+    public function listById(String $id) {
+        $deputado = $this->service->findDeputieById($id);
+
+       return view('deputados.deputado', ['deputado' => $deputado]);
+    }
 }
