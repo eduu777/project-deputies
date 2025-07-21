@@ -19,7 +19,14 @@ return new class extends Migration
             $table->string('sigla_uf');
             $table->integer('id_legislatura');
             $table->string('url_foto');
-            $table->string('email');
+            $table->string('email')->nullable();
+            $table->string('nome_civil')->nullable();
+            $table->string('situacao')->nullable();
+            $table->string('cpf')->nullable();
+            $table->string('sexo')->nullable();
+            $table->date('data_nascimento')->nullable();
+            $table->string('uf_nascimento')->nullable();
+            $table->string('municipio_nascimento')->nullable();
             $table->timestamps();
         });
     }

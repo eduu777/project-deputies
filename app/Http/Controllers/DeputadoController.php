@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Services\DeputadoService;
 
-class deputadoController extends Controller
+class DeputadoController extends Controller
 {
 
     protected $service;
