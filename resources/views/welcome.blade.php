@@ -6,7 +6,7 @@
 @include('components.header')
 
     <div class="container">
-        <div class="mt-5 text-center">
+        <div class="mt-4 text-center">
             <h1 class="text-uppercase fw-bold">Quem são os deputados</h1>
             <p><a class="text-uppercase text-decoration-none" href="#">Partidos</a></p>
         </div>

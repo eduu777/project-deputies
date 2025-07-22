@@ -37,9 +37,11 @@ class ImportDeputadosJob implements ShouldQueue
                 try{
                     $response = Http::get('https://dadosabertos.camara.leg.br/api/v2/deputados/'.$d['id']);
 
+
                     if($response->successful()){
 
                         $details = $response->json()['dados'];
+
                         Deputado::updateOrCreate(
                             ['id' => $d['id']],
                             [
@@ -50,13 +52,14 @@ class ImportDeputadosJob implements ShouldQueue
                                 'id_legislatura' => $d['idLegislatura'],
                                 'url_foto' => $d['urlFoto'],
                                 'email' => $d['email'] ?? null,
-                                'nome_civil' => $details['nomeCivil'],
-                                'situacao' => $details['ultimoStatus']['situacao'],
-                                'cpf' => $details['cpf'],
-                                'sexo' => $details['sexo'],
-                                'data_nascimento' => $details['dataNascimento'],
-                                'uf_nascimento' => $details['ufNascimento'],
-                                'municipio_nascimento' => $details['municipioNascimento']
+                                'email' => $d['email'] ?? null,
+                                'nome_civil' => $details['nomeCivil'] ?? null,
+                                'situacao' => $details['ultimoStatus']['situacao'] ?? null,
+                                'cpf' => $details['cpf'] ?? null,
+                                'sexo' => $details['sexo'] ?? null,
+                                'data_nascimento' => $details['dataNascimento'] ?? null,
+                                'uf_nascimento' => $details['ufNascimento'] ?? null,
+                                'municipio_nascimento' => $details['municipioNascimento'] ?? null,
                             ]
                         );
 

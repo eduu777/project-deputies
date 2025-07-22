@@ -5,7 +5,7 @@
             <div class="card-body">
                 <h5 class="card-title fw-bold text-truncate">{{ $d['nome'] }}</h5>
                 <p class="card-text text-muted">{{ $d['sigla_partido'] }}</p>
-                <a href="#" class="btn btn-primary px-4 w-100">Saiba Mais</a>
+                <a href="{{route('deputados.listById', $d['id'])}}" class="btn btn-primary px-4 w-100">Saiba Mais</a>
             </div>
         </div> 
         @endforeach 
