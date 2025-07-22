@@ -24,6 +24,10 @@ class DeputadoController extends Controller
     public function listById(String $id) {
         $deputado = $this->service->findDeputieById($id);
 
-       return view('deputados.deputado', ['deputado' => $deputado]);
+        $valorDespesas = $this->service->findExpenseValueById($id);
+
+        $profissoes = $this->service->findProfessionsById($id);
+
+       return view('deputados.deputado', ['deputado' => $deputado, 'valorDespesas' => $valorDespesas, 'profissoes' => $profissoes]);
     }
 }

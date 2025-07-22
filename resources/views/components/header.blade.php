@@ -8,8 +8,8 @@
         </a>
 
         <ul class="nav nav-pills">
-            <li class="nav-item"><a href="#" class="nav-link text-white" aria-current="page">Deputados</a></li>
-            <li class="nav-item"><a href="#" class="nav-link text-white">Lideres</a></li>
+            <li class="nav-item"><a href="{{ route('deputados.index') }}" class="nav-link text-white" aria-current="page">Deputados</a></li>
+            <li class="nav-item"><a href="{{ route('partidos.index') }}" class="nav-link text-white">Partidos</a></li>
             <li class="nav-item"><a href="#" class="nav-link text-white">Frentes Parlamentares</a></li>
         </ul>
         </header>

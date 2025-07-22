@@ -1,6 +1,6 @@
 <div class="row">
         @foreach ($deputados->take(12) as $d)
-        <div class="card mx-auto mt-2" style="width: 12rem;">
+        <div class="card mx-auto mt-4" style="width: 12rem;">
             <img src={{ $d['url_foto'] }} class="card-img-top rounded-top w-100" alt="Imagem do Card">
             <div class="card-body">
                 <h5 class="card-title fw-bold text-truncate">{{ $d['nome'] }}</h5>
